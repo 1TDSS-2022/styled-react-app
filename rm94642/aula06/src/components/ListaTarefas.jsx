@@ -3,7 +3,6 @@ import Tarefa from './Tarefa'
 import { DivLista } from './style/styled'
 import FormTarefas from './FormTarefas'
 
-
 export default function ListaTarefas() {
 
     const [tarefa, setTarefa] = useState([{
@@ -17,7 +16,6 @@ export default function ListaTarefas() {
         descricao:'Gerar planilhas',
     },
 
-    
 ])
 
     const [nTarefa, setNTarefa] = useState({
@@ -51,7 +49,6 @@ export default function ListaTarefas() {
         setTarefa(lista)
     }
 
-  
   return (
     <DivLista>
         <FormTarefas addTarefa={addTarefa} tarefa={nTarefa} digit={captura}/>

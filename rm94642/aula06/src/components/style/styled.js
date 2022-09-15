@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-
 export const DivLista = styled.div`
  
     width: 100%;
@@ -35,7 +34,7 @@ export const DivForm = styled.div`
     form{width:50%; margin:auto;}
     form input, form textarea{padding:5px; width:80%;}
     for textarea{height:80px;}
-    form button{padding:10px; background: #3c3; color:#fff}
+    form button{padding:10px; background: #3c3; color:#fff;}
     `
 
 export const DivHome = styled.div`
@@ -57,6 +56,7 @@ export const NavMenu = styled.nav`
     `
 
 export const DivApp = styled.div`
-    h1{text-align: center};
+    h1{text-align: center; color: #fff};
     font-weight: bold;
+    background-color: #222;
     `
