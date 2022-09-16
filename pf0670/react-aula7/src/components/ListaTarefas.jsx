@@ -2,6 +2,7 @@ import React from 'react'
 import Tarefa from './Tarefa'
 import { DivLista } from '../style/styled'
 import { useState } from 'react'
+import FormTarefas from './FormTarefas'
  
 
 
@@ -52,7 +53,9 @@ export default function ListaTarefa() {
   return (
     <DivLista>
 
-        <button onClick={addTarefa}>Adicionar</button>
+        <FormTarefas/>
+
+        {/* <button onClick={addTarefa}>Adicionar</button> */}
 
         {tarefa.map((tar, i)=>(
             <Tarefa
