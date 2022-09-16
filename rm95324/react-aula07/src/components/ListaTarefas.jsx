@@ -15,20 +15,39 @@ export default function ListaTarefas() {
   }
 ])
 
+  const [nTarefa, setNTarefa] = useState({
+    "titulo":"",
+    "setor":"",
+    "descricao":""
+  })
+
+  const addTarefa = (e) =>{
+    // Função que não deixa a página atualizar no momento do evento ♥
+    e.preventDefault()
+/*     const nTarefa = {
+      titulo: 'Planilhas de Salários',
+      setor: 'Dep. Pessoal',
+      descricao: 'Levantar os valores das vendas'
+    } */
+
+    setNTarefa({
+      "titulo":"",
+      "setor":"",
+      "descricao":""
+    })
+
+    setTarefa([...tarefa, nTarefa])
+  }
+
   return (
     <DivLista>
+      <button onClick={addTarefa}>Adicionar</button>
       {tarefa.map((tar,i)=>(
         <Tarefa
           key = {i}
-          titulo = {tar.titulo}
-          setor = {tar.setor}
-          descricao = {tar.descricao}
+          tarefa = {tar}
         />
       ))}
-        <p>Lista de Tarefas</p>
-        <Tarefa/>
-        <Tarefa/>
-        <Tarefa/>
     </DivLista>
   )
 }
