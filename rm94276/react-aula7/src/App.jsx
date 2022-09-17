@@ -5,7 +5,7 @@ export default function App(){
 
     return(
         <>
-            <h1>Esudo sbre syled Component</h1>
+            <h1>Estudo sobre styled Component</h1>
             <ListaTarefas></ListaTarefas>
         </>
     )
