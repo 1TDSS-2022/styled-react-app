@@ -2,6 +2,7 @@ import React from 'react'
 import Tarefa from './Tarefa'
 import { DivLista } from '../style/styled'
 import { useState } from 'react'
+import FormTarefas from './FormTarefas'
 
 export default function ListaTarefas() {
 
@@ -46,10 +47,46 @@ export default function ListaTarefas() {
         setTarefa([...tarefa, nTarefa])
     }
 
+    //FUNCAO DE CAPTURA DE DADOS DO FORMULARIO
+
+    const captura = (e)=> {
+        e.preventDefault()
+        
+
+        //DESESTRUTURACAO
+        const {name, value} = e.target
+
+        if(name == "titulo"){
+            setNTarefa({
+                "titulo":value,
+                "setor":nTarefa.setor,
+                "descricao":nTarefa.descricao
+            })
+        }
+        else if(name == "setor"){
+            setNTarefa({
+                "titulo":nTarefa.titulo,
+                "setor":value,
+                "descricao":nTarefa.descricao
+            })
+        }
+        else if(name == "descricao"){
+            setNTarefa({
+                "titulo":nTarefa.descricao,
+                "setor":nTarefa.setor,
+                "descricao":value
+            })
+        }
+    }
+
     return (
         <DivLista>
 
-            <button onClick={addTarefa}>Adicionar</button>
+            <FormTarefas
+                digit={captura}
+            />
+
+            {/* <button onClick={addTarefa}>Adicionar</button> */}
 
             {tarefa.map((tar, i) => (
                 <Tarefa
