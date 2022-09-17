@@ -39,9 +39,24 @@ export default function ListaTarefas() {
     setTarefa([...tarefa, nTarefa])
   }
 
+  const captura = (e)=>{
+    e.preventDefault()
+
+    // Desestruturação
+    const {name, value} = e.target
+
+    if (name === "titulo"){
+      setNTarefa({
+        "titulo":value,
+        "setor":nTarefa.setor,
+        "descricao":nTarefa.descricao
+      })
+    }
+  }
+
   return (
     <DivLista>
-      <button onClick={addTarefa}>Adicionar</button>
+      <FormTarefas/>
       {tarefa.map((tar,i)=>(
         <Tarefa
           key = {i}
