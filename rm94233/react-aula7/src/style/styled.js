@@ -19,8 +19,8 @@ export const DivTarefa = styled.div`
     text-align : center;
     width : 350px;
     height : 200px;
-
-    h2,p{
+    h2,
+    p{
         padding-bottom : 10px;
     }
 
