@@ -50,10 +50,29 @@ export default function ListaTarefa() {
         setTarefa([...tarefa, nTarefa])
     }
 
+    //FUNÇÃO DE CAPTURA DE DADOS DO FORMULÁRIO
+
+    const captura = (e)=>{
+        e.preventDefault()
+
+        //DESESTRUTURAÇÃO
+        const {name, value} = e.target
+
+        if(name === "titulo"){
+            setNTarefa({
+                "titulo":value,
+                "setor":nTarefa.setor,
+                "descricao":nTarefa.descricao
+            })  
+        }
+    }
+
   return (
     <DivLista>
 
-        <FormTarefas/>
+        <FormTarefas
+            digit={captura}
+        />
 
         {/* <button onClick={addTarefa}>Adicionar</button> */}
 
