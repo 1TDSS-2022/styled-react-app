@@ -5,9 +5,9 @@ import {FaTrashAlt as X } from 'react-icons/fa';
 export default function Tarefa(props) {
   return (
     <DivTarefa>
-      <h2>{props.titulo}</h2>
-      <p>Para: {props.setor}</p>
-      <p>{props.descricao}</p>
+      <h2>{props.tarefa.titulo}</h2>
+      <p>Para: {props.tarefa.setor}</p>
+      <p>{props.tarefa.descricao}</p>
       <button onClick={props.remove}><X/></button>
     </DivTarefa>
   )

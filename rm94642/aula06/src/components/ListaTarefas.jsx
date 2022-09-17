@@ -26,7 +26,7 @@ export default function ListaTarefas() {
         
        e.preventDefault()
 
-       setNTarefa({titulo:'', setor:'',descricao:'',})
+       setNTarefa({'titulo':'', 'setor':'','descricao':'',})
     
     setTarefa([...tarefa,nTarefa])
 }
