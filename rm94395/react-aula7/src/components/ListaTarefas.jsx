@@ -62,10 +62,26 @@ export default function ListaTarefa() {
             setNTarefa({
                 "titulo":"value",
                 "setor":"nTarefa.setor",
-                "descricao":"nTarefa.descreicao"
+                "descricao":"nTarefa.descricao"
+            })
+
+        
+        }
+        else if(name === 'setor'){
+            setNTarefa({
+                "setor":"value",
+                "titulo":"Ntarefa.titulo",
+                "descricao":"nRarefa.descricao"
             })
         }
-    }
+        else if(name === 'descricao'){
+            setNTarefa({
+                "descricao":"value",
+                "titulo":"Ntarefa.titulo",
+                "setor":"nRarefa.setor"
+            })
+        }
+    }   
 
   return (
     <DivLista>
